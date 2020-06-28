@@ -1,0 +1,24 @@
+<view class="container">
+  <form bindsubmit="issueWenda">
+    <view class="question_title">
+      <input name="question" placeholder="请输入您要提出的问题" maxlength="20"></input>
+    </view>
+
+    <view class="question_detail">
+      <textarea name="detail"placeholder="请输入问题详情(可选)" maxlength="300"></textarea>
+    </view>
+
+    <view class="question_image">
+      <view class="question_image_item_select" wx:if="{{imageUrl.length==0}}" bindtap="chooseImg">
+        <image src="../../../images/add3.png"></image>
+      </view>
+      <view wx:else style="display:flex; flex-direction:row">
+        <view wx:for="{{imageUrl}}" class="question_image_item" >
+          <image src="{{item}}" mode="aspectFill"></image>
+        </view>
+      </view>
+    </view>
+
+    <button style="position:fixed;bottom:20rpx;left:0;right:0" form-type="submit" disabled="{{issuing}}">提交</button>
+  </form>
+</view>

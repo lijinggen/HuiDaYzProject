@@ -1,0 +1,62 @@
+/*
+此文件为开发者工具生成，生成时间: 2020/5/21 下午9:06:59 
+使用方法：参考 "pages\home\home.skeleton.wxml"
+*/
+.sk-transparent {
+    color: transparent !important;
+  }
+.sk-text-14-2857-667 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 0.9625rem;
+    position: relative !important;
+  }
+.sk-text {
+    background-origin: content-box !important;
+    background-clip: content-box !important;
+    background-color: transparent !important;
+    color: transparent !important;
+    background-repeat: repeat-y !important;
+  }
+.sk-text-14-2857-70 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 0.9625rem;
+    position: relative !important;
+  }
+.sk-text-14-2857-113 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 0.9625rem;
+    position: relative !important;
+  }
+.sk-text-14-2857-112 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 0.9625rem;
+    position: relative !important;
+  }
+.sk-text-14-2857-646 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 0.9625rem;
+    position: relative !important;
+  }
+.sk-text-14-2857-506 {
+    background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+    background-size: 100% 0.9625rem;
+    position: relative !important;
+  }
+.sk-text-32-9787-427 {
+    background-image: linear-gradient(transparent 32.9787%, #EEEEEE 0%, #EEEEEE 67.0213%, transparent 0%) !important;
+    background-size: 100% 2.9375rem;
+    position: relative !important;
+  }
+.sk-image {
+    background: #EFEFEF !important;
+  }
+.sk-container {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000000;
+    background-color: transparent;
+  }

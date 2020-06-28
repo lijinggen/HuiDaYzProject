@@ -1,0 +1,65 @@
+<view class="container">
+  <view class="classify">
+    <form bindsubmit="formsubmit">
+      <view class="classify_head">
+        <view class="classify_btn" bindtap="listpx">
+          <image src="../../images/classify.png"></image>
+          <text>筛选</text>
+        </view>
+        <view class="classify_search">
+          <image src="../../images/search.png"></image>
+          <input type="text" name="sarchContent"></input>
+        </view>
+        <view class="classify_search_btn">
+          <button size="mini" form-type="submit">搜索</button>
+        </view>
+      </view>
+    </form>
+    <view class="temp {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+      <view class="classify_container">
+        <view class="classify_container_row">
+          <view wx:for="{{classify}}">
+            <view class="classify_container_row_item_select" wx:if="{{classifyChoice==item}}">{{item}}</view>
+            <view class="classify_container_row_item" wx:else>{{item}}</view>
+          </view>
+        </view>
+        <view class="classify_container_row">
+          <view wx:for="{{hownew}}">
+            <view class="classify_container_row_item_select" wx:if="{{hownewChoice==item}}">{{item}}</view>
+            <view class="classify_container_row_item" wx:else>{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="add-wrap" bindtap="issueXianzhi">
+    <image src="../../images/add.png"></image>
+  </view>
+
+  <view class="xianzhi_item_container" wx:for="{{xianzhiList}}" bindtap="detailXianzhi" data-xianzhiid="{{item.xianzhiID}}">
+    <view class="xianzhi_item_head">
+      <image src="{{item.avatarUrl}}"></image>
+      <text>{{item.nickName}}</text>
+      <text style="margin-left:auto;color: rgb(197, 0, 0)">￥{{item.price}}</text>
+    </view>
+    <view class="xianzhi_item_middle">
+      <image src="{{item.finalImgUrl[0]}}" mode="aspectFill"></image>
+      <view class="xianzhi_item_middle_text">
+        <text class="xianzhi_item_middle_text_text">{{item.title}}</text>
+        <text maxlength="300" class="xianzhi_item_middle_text_xxx" >{{item.introduce}}</text>
+      </view>
+    </view>
+    <view class="xianzhi_item_foot">
+      <text>{{item.formatTime}}</text>
+      <view class="xianzhi_item_foot_watch">
+        <image src="../../images/eye.png"></image>
+        <text>{{item.watchTimes}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom_row">
+  <button size="mini" bindtap="lastPage">上一页</button>
+  <button size="mini" bindtap="nextPage">下一页</button>
+  <view class="bottom_row_page"><text decode="false">{{page+1}}/{{maxPage+1}}</text></view>
+</view>

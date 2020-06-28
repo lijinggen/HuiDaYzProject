@@ -1,0 +1,31 @@
+<form class="container">
+  <view class="content_container">
+    <view class="content_head">
+      <image src="../../../images/gongzuoneirong.png"></image>
+      <text>工作内容</text>
+    </view>
+    <view class="content_content">
+      <textarea maxlength="300" placeholder="请输入工作内容"></textarea>
+    </view>
+  </view>
+	<view class="contact_container">
+		<view class="contact_container_wechat">
+			<image src="../../../images/issue_paotui/wechat.png"></image>
+			<input name="wechat" placeholder="请输入微信" maxlength="30"></input>
+		</view>
+
+		<view class="contact_container_phone">
+			<image src="../../../images/issue_paotui/phone.png"></image>
+			<input name="phone" placeholder="请输入手机号" type="number" maxlength="11"></input>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../../images/didian.png"></image>
+			<input name="place" placeholder="请输入工作地点" maxlength="100"></input>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../../images/jiage.png"></image>
+			<input name="place" placeholder="请输入薪酬如20元/h"  maxlength="50"></input>
+		</view>
+	</view>
+  <button>提交</button>
+</form>

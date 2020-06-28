@@ -1,0 +1,25 @@
+<view class="container" wx:if="{{renzheng==''}}">
+	<view class="head">
+		<text>上传学生证</text>
+	</view>
+	<view class="bottom" wx:if="{{imageList.length==0}}">
+		<image src="../../images/add3.png" bindtap="uploadImg"></image>
+	</view>
+	<view class="bottom_res" wx:else>
+		<image src="{{imageList[0]}} " bindtap="uploadImg" mode="aspectFill"></image>
+	</view>
+	<button bindtap="submit">上传</button>
+</view>
+
+<view wx:else class="container">
+	<view class="studentID">
+    <image src="../../images/renzhen.png"></image><text>已认证</text>
+  </view>
+
+	<view class="bottom_res"  catchtouchmove="ture">
+		<image src="{{renzheng.finalImgUrl}} " mode="aspectFill"></image>
+	</view>
+  <view class="name"><text>姓名: {{renzheng.name}}</text></view>
+  <view class="studentID"><text>学号: {{renzheng.studentID}}</text></view>
+  
+</view>

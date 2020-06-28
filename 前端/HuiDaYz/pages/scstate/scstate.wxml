@@ -1,0 +1,79 @@
+<view class="head">
+  <image src="{{avatarUrl}}" class="head_first_image"></image>
+  <text>回复我的:2</text>
+  <image src="../../images/issue.png" class="head_second_image" bindtap="issueScstate"></image>
+</view>
+
+<view class="container">
+  <view class="scstate_item" wx:for="{{scstateList}}" wx:for-index="scIndex" >
+    <view class="scstate_item_head">
+      <image src="{{item.avatarUrl}}"></image>
+      <view style="display:flex;flex-direction:column">
+        <text>{{item.nickName}}</text>
+        <text style="color:gray;font-size:20rpx;margin-top:auto;">{{item.formatTime}}</text>
+      </view>
+    </view>
+    <view class="scstate_item_middle">
+      <text style="text-overflow:ellipsis;word-wrap:break-word;">{{item.content}}</text>
+    </view>
+
+    <view wx:if="{{item.finalImageList.length!=0}}">
+      <!-- 1~3张图片的样式 -->
+      <view wx:if="{{item.finalImageList.length>=1&&item.finalImageList.length<=3}}" class="oneToThree">
+        <view class="imageItem" wx:for-item="imageSrc" wx:for="{{item.finalImageList}}" >
+          <image src="{{imageSrc}}" mode="aspectFill" bindtap="previewImg" data-currentUrl="{{imageSrc}}" data-urls="{{item.finalImageList}}"></image>
+        </view>
+      </view>
+      <!--4张样式-->
+      <view wx:if="{{item.finalImageList.length==4}}" class="four">
+        <view class="imageItem" wx:for-item="imageSrc" wx:for="{{item.finalImageList}}" >
+          <image src="{{imageSrc}}" mode="aspectFill" bindtap="previewImg" data-currentUrl="{{imageSrc}}" data-urls="{{item.finalImageList}}"></image>
+        </view>
+      </view>
+      <view wx:if="{{item.finalImageList.length>4}}" class="fiveAbove">
+        <view class="imageItem" wx:for-item="imageSrc" wx:for="{{item.finalImageList}}" >
+          <image src="{{imageSrc}}" mode="aspectFill" bindtap="previewImg" data-currentUrl="{{imageSrc}}" data-urls="{{item.finalImageList}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="scstate_item_foot">
+      <button bindtap="showModal" data-scstateID="{{item.scstateID}}" size="mini">评论</button>
+    </view>
+    <view class="scstate_item_comment" wx:if="{{item.scstateCommentList.length!=0}}">
+      <view class="triangle"></view>
+      <view class="scstate_item_comment_item" wx:for="{{item.scstateCommentList}}" wx:for-item="comment" wx:if="{{index<3}}"  data-target="{{comment}}" bindtap="showModal" data-scstateID="{{item.scstateID}}" >
+        <span style="color:#596788;font-weight: bold">{{comment.answerNickName}}</span>
+        <span wx:if="{{comment.targetNickName!=null}}" style="width:57rpx;margin-left:6rpx;"> 回复 </span>
+        <span wx:if="{{comment.targetNickName!=null}}" style="color:#596788;font-weight:bold">{{comment.targetNickName}}</span>
+        <span style="margin-left:3rpx;margin-right:10rpx">:</span>
+        <text style="">{{comment.content}}</text>
+      </view>
+      <view wx:if="{{item.scstateCommentList.length>3}}">
+        <view wx:if="{{isFold[scIndex]==0}}" class="fold" bindtap="fold" data-index="{{scIndex}}" style="font-size:21rpx">
+          查看所有
+        </view>
+        <view wx:else>
+          <view class="scstate_item_comment_item" wx:for="{{item.scstateCommentList}}" wx:for-item="comment" wx:if="{{index>=3}}" data-target="{{comment}}" bindtap="showModal" data-scstateID="{{item.scstateID}}" > 
+            <span style="color:#596788;font-weight: bold">{{comment.answerNickName}}</span>
+            <span wx:if="{{comment.targetNickName!=null}}" style="width:57rpx;margin-left:6rpx;">回复</span>
+            <span wx:if="{{comment.targetNickName!=null}}" style="color:#596788;font-weight:bold">{{comment.targetNickName}}</span>
+            <span style="margin-left:3rpx;margin-right:10rpx">:</span>
+            <text>{{comment.content}}</text>
+          </view>
+          <view class="fold" bindtap="fold" data-index="{{scIndex}}" style="font-size:21rpx"> 
+            收起
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+    <input placeholder="{{placeHolder}}" maxlength="100" type="text" confirm-type="send" bindinput="getContent" bindconfirm="issueComment" value="{{content}}"></input>
+  </view>
+</view>

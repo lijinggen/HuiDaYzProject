@@ -1,0 +1,97 @@
+/* pages/renzhen/renzhen.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx;
+  background: rgba(221, 221, 221, 0.397);
+  border-radius: 12rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  font-weight: bolder;
+  font-size: 30rpx;
+}
+
+.bottom {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 280rpx;
+  border-radius: 12rpx;
+  background: rgba(221, 221, 221, 0.397);
+  display: flex;
+  align-content: center;
+  vertical-align: middle;
+  padding: 10rpx;
+  align-items: center;
+}
+
+.bottom image {
+  height: 100rpx;
+  width: 100rpx;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 30rpx;
+}
+
+.bottom_res {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  height: 280rpx;
+  border-radius: 12rpx;
+  background: rgba(221, 221, 221, 0.397);
+  display: flex;
+  align-content: center;
+  vertical-align: middle;
+  padding: 10rpx;
+  align-items: center;
+}
+
+.bottom_res image {
+  height: 260rpx;
+  width: 360rpx;
+  margin: 0 auto;
+}
+
+.name {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx;
+  background: rgba(221, 221, 221, 0.397);
+  border-radius: 12rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  font-weight: bolder;
+  font-size: 30rpx;
+}
+
+.studentID {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx;
+  background: rgba(221, 221, 221, 0.397);
+  border-radius: 12rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  font-weight: bolder;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.studentID image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 40%;
+}

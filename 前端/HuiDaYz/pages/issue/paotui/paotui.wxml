@@ -1,0 +1,76 @@
+<view class="container">
+  <form bindsubmit="issuePaotui">
+    <view class="classify">
+      <picker bindchange="bindPickerChange" mode="selector" range="{{classify}}" value="{{index}}" name="classify">
+        <view>
+          <span style="font-weight:bold"></span>{{classify[index]}}</view>
+        <text style="color:gray;font-size:22rpx;">选择服务后填写相关信息,关键信息只能由抢单者可视</text>
+      </picker>
+    </view>
+    <view class="kuaidibangna" wx:if="{{index==1}}" animation="{{animationData}}">
+      <view class="kuaidibangna_locate">
+        <image src="../../../images/issue_paotui/locate.png"></image>
+        <view class="kuaidibangna_locate_right">
+          <input name="qujianma" placeholder="请输入取件码" style="border-bottom:1rpx solid rgba(235, 235, 235, 0.822);" maxlength="15"></input>
+          <input name="qujianPlace"placeholder="请输入取件地点:如菜鸟驿站" style="border-bottom:1rpx solid rgba(235, 235, 235, 0.822);" maxlength="60"></input>
+          <input name="songdaPlace" placeholder="请输入送达地点:如18栋XXX宿舍" style="border-bottom:1rpx solid rgba(235, 235, 235, 0.822);" maxlength="60"></input>
+          <input name="songdaTime" placeholder="送达时间:如18点到20点" maxlength="15"></input>
+        </view>
+      </view>
+      <view class="kuaidibangna_attribute">
+        <input name="weight" placeholder="物品重量(KG)" type="number" maxlength="5"></input>
+        <input name="wupinClass" placeholder="物品种类" maxlength="20"></input>
+      </view>
+      <text style="margin-left:15rpx;font-size:24rpx;color:gray">上传取件码相关截图</text>
+      <view class="select" bindtap="issueImg" wx:if="{{imageUrl.length==0}}">
+        <image src="../../../images/issue_paotui/add3.png" mode="aspectFill"> </image>
+      </view>
+      <view wx:else class="imageContainer">
+        <image src="{{imageUrl}}" mode="aspectFill" ></image>
+      </view>
+    </view>
+
+    <view class="kuaidibangji" wx:if="{{index==2}}" animation="{{animationData}}">
+      <view class="kuaidibangji_locate">
+        <image src="../../../images/issue_paotui/locate.png"></image>
+        <view class="kuaidibangji_locate_right">
+          <input name="qujianPlace" placeholder="请输入取货地点:如18栋XXX宿舍" maxlength="60"></input>
+          <input name="qujianTime" placeholder="取货时间:如18点到20点" maxlength="20"></input>
+        </view>
+      </view>
+      <view class="kuaidibangji_attribute">
+        <input name="weight" placeholder="物品重量(KG)" type="number" maxlength="5"></input>
+        <input name="wupinClass" placeholder="物品种类" maxlength="15"></input>
+      </view>
+    </view>
+
+    <view class="dayin" wx:if="{{index==3}}" animation="{{animationData}}">
+      <view class="kuaidibangji_locate">
+        <image src="../../../images/issue_paotui/locate.png" mode="aspectFill"></image>
+        <view class="kuaidibangji_locate_right">
+          <input name="songdaPlace" placeholder="请输入送达地点:如18栋XXX宿舍" maxlength="60"></input>
+          <input name="songdaTime" placeholder="送达时间:如18点到20点" maxlength="20"></input>
+        </view>
+      </view>
+      <text style="font-size:22rpx; color: #596788;">文件需要通过微信转发，请注意微信消息</text>
+    </view>
+    
+    <view class="contact_container">
+      <view class="contact_container_wechat">
+        <image src="../../../images/issue_paotui/wechat.png"></image>
+        <input name="wechat" placeholder="请输入微信" maxlength="30"></input>
+      </view>
+
+      <view class="contact_container_phone">
+        <image src="../../../images/issue_paotui/phone.png"></image>
+        <input name="phone" placeholder="请输入手机号" type="number" maxlength="11"></input>
+      </view>
+
+      <view class="contact_container_price">
+        <image src="../../../images/issue_paotui/money.png"></image>
+        <input name="price" placeholder="建议3元起步" type="digit" maxlength="6"></input>
+      </view>
+    </view>
+    <button form-type="submit">提交并支付</button>
+  </form>
+</view>

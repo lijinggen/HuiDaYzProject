@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30rpx;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 12rpx;
+  background: rgba(212, 57, 57, 0.397);
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 20rpx;
+}
+
+.first text {
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+}
+
+.head image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.head text {
+  margin-left: 20rpx;
+  line-height: 60rpx;
+}
+
+.middle {
+  padding-top: 12rpx;
+  padding-bottom: 20rpx;
+}
+
+.middle text {
+  font-size: 26rpx;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot text {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  font-size: 24rpx;
+}
+
+.foot image {
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 250rpx;
+}
+
+.add-wrap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  background: rgba(206, 206, 206, 0.3);
+  border-radius: 30rpx;
+  padding: 10px;
+  justify-content: center;
+}
+
+.add-wrap image {
+  width: 25px;
+  height: 25px;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 12rpx;
+  background: rgba(221, 221, 221, 0.397);
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 20rpx;
+  min-height: 120rpx;
+}

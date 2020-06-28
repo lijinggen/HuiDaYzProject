@@ -1,0 +1,105 @@
+<view class="container">
+	<!-- 轮播图 -->
+	<swiper class="home-swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{lunboData}}" wx:key="unique">
+			<swiper-item>
+				<image src="{{item}}" mode="aspectFill" class="slide-image" />
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<view class="navi_container">
+		<view class="navi_container_row">
+			<view class="navi_item" bindtap="toScstate">
+				<image src="../../images/home_navigator/school.png" class="navi_item_image"></image>
+				<text class="navi_item_text">校园动态</text>
+			</view>
+			<view class="navi_item">
+				<image src="../../images/home_navigator/shiwuzhaoling.png" class="navi_item_image"></image>
+				<text class="navi_item_text">问题反馈</text>
+			</view>
+
+			<view class="navi_item" bindtap="toJianzhi">
+				<image src="../../images/home_navigator/jianzhi.png" class="navi_item_image"></image>
+				<text class="navi_item_text">兼职信息</text>
+			</view>
+
+		</view>
+
+		<view class="line"></view>
+
+		<view class="navi_container_row">
+			<view class="navi_item" bindtap="toShowlove">
+				<image src="../../images/home_navigator/biaobai.png" class="navi_item_image"></image>
+				<text class="navi_item_text">表白墙</text>
+			</view>
+			<view class="navi_item" bindtap="toWenda">
+				<image src="../../images/home_navigator/wenda.png" class="navi_item_image"></image>
+				<text class="navi_item_text">校园问答</text>
+			</view>
+
+			<view class="navi_item">
+				<image src="../../images/home_navigator/contact.png" class="navi_item_image"></image>
+				<text class="navi_item_text">联系我们</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="notic_container">
+		<view class="notic_container_head">
+			<view style="margin:0 auto; display:flex;flex-direction:row;">
+				<image src="../../images/notic.png" class="notic_container_head_img"></image>
+				<text class="notic_container_head_text">公告栏</text>
+			</view>
+		</view>
+
+		<scroll-view class="gonggao_item_container" scroll-y>
+			<view class='wrap'>
+				<view>
+					<view class='date-show'>
+						<view class='lt-arrow' bindtap='lastMonth'>
+							<image src='../../images/pre.png' mode='aspectFit'></image>
+						</view>
+						{{year}}年{{month}}月
+						<view class='rt-arrow' bindtap='nextMonth'>
+							<image src='../../images/next.png' mode='aspectFit'></image>
+						</view>
+					</view>
+				</view>
+				<view class='header'>
+					<view wx:for='{{date}}' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}' style="font-size:18rpx">{{item}}
+					</view>
+				</view>
+				<view class='date-box'>
+					<view wx:for='{{dateArr}}' class='{{isToday == item.isToday ? "nowDay" : ""}}' data-date='{{item.isToday}}'>
+						<view class='date-head'>
+							<view>{{item.dateNum}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="gonggao_item">
+				<view class="gonggao_item_head">
+					<image src="../../images/calendar.png"></image>
+					<text>你已签到<text style="color:red">32 </text>天</text>
+					<button size="mini">签到</button>
+				</view>
+			</view>
+			<view class="gonggao_item">
+				<view class="gonggao_item_head">
+					<image src="../../images/laba.png"></image>
+					<text>表白墙第<text style="color:red">2 </text>期已经更新!</text>
+				</view>
+			</view>
+			<view class="gonggao_item">
+				<view class="gonggao_item_head">
+					<image src="../../images/laba.png"></image>
+					<text>兼职信息已更新<text style="color:red">3 </text>条!</text>
+				</view>
+			</view>
+
+		</scroll-view>
+	</view>
+
+
+</view>

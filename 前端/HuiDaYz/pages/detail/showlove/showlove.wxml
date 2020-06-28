@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="first">
+    <view class="head">
+      <image src="{{showlove.avatarUrl=='../../images/niming.jpg'? '../../../images/niming.jpg':showlove.avatarUrl}}"></image>
+      <text>{{showlove.nickName}}</text>
+    </view>
+    <view class="middle">
+      <text>To:{{showlove.target}}</text>
+    </view>
+    <view class="foot">
+      <text disabled="true">{{showlove.reason}}</text>
+      <image wx:if="{{showlove.finalImgUrl!='weixuan'}}" src="{{showlove.finalImgUrl}}" mode="aspectFit" bindtap="previewImg" data-imgUrl="{{showlove.finalImgUrl}}"></image>
+    </view>
+  </view>
+
+  <view class="comment_container">
+    <text bindtap="changeResponse" data-content="请输入评论" class="comment_container_text">留言区</text>
+    <view wx:if="{{comment.length!=0}}" class="comment_container_head">
+      <view class="comment_container_head_item" wx:for="{{comment}}" wx:key='index' bindtap="changeResponse" data-content="{{comment.length-index}}">
+        <text>{{item.commentContent}}</text>
+        <view class="comment_container_head_item_foot">
+          <text>{{comment.length-index}}楼</text>
+          <view style="margin-left:auto;">
+            <text>{{item.formatTime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="comment_container_middle">
+      <image src="../../../images/empty1.png"></image>
+    </view>
+  </view>
+</view>
+<view class="bottom-dialog-body bottom-pos">
+  <input placeholder="{{placeholder}}" bindinput="getCommentContent" value="{{commentContent}}"></input>
+  <button bindtap="issuingComment">回复</button>
+</view>

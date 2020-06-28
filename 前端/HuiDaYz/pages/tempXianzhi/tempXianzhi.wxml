@@ -1,0 +1,31 @@
+<view wx:if="{{xianzhiList.length==0}}">
+  没有找到相关内容
+</view>
+
+<view class="container" wx:else>
+  <view class="xianzhi_item_container" wx:for="{{xianzhiList}}" bindtap="detailXianzhi" data-xianzhiid="{{item.xianzhiID}}">
+    <view class="xianzhi_item_head">
+      <image src="{{item.avatarUrl}}"></image>
+      <text>{{item.nickName}}</text>
+      <text style="margin-left:auto;color:red">￥{{item.price}}</text>
+    </view>
+    <view class="xianzhi_item_middle">
+      <image src="{{item.finalImgUrl[0]}}"></image>
+      <view class="xianzhi_item_middle_text">
+        <text>{{item.title}}</text>
+        <textarea disabled="true" maxlength="">{{item.introduce}}</textarea>
+      </view>
+    </view>
+    <view class="xianzhi_item_foot">
+      <text>{{item.formatTime}}</text>
+      <view class="xianzhi_item_foot_watch">
+        <image src="../../images/eye.png"></image>
+        <text>{{item.watchTimes}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom_row">
+  <button size="mini" bindtap="lastPage">上一页</button>
+  <button size="mini" bindtap="nextPage">下一页</button>
+</view>

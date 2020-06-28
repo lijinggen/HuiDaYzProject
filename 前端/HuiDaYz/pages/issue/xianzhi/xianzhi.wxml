@@ -1,0 +1,52 @@
+<view class="container">
+  <form bindsubmit="issueXianzhi">
+    <view class="imageRow">
+      <view class="imageRow_item" bindtap="chooseImg" wx:if="{{imgTempUrl.length==0}}">
+        <image src="../../../images/issue_xianzhi/selectImage.png"></image>
+        <text>+图片</text>
+      </view>
+      <view wx:else class="imageRow">
+        <view wx:for="{{imgTempUrl}}" class="imageRow_image" bindtap="chooseImg">
+          <image src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="title_row">
+      <input name="title" placeholder="请输入宝贝标题，填写品牌型号" maxlength="25"></input>
+    </view>
+    <view class="introduce_row">
+      <textarea name="introduce" placeholder="描述你送出的原因，入手渠道和你的故事" maxlength="120"></textarea>
+    </view>
+
+    <view class="location_row">
+      <image src="../../../images/issue_xianzhi/locate.png"></image>
+      <view class="location_row_right">
+        <text>{{location_head}}</text>
+        <input name="location" placeholder="请输入交易详细地址" maxlength="100"></input>
+      </view>
+    </view>
+
+    <view class="choice_row">
+      <view class="choice_row_item" style="border-right:1rpx solid rgb(235, 235, 235);">
+        <picker range="{{hownew}}" value="{{hownew[index1]}}" bindchange="bindPickerChange1" class="choice_row_item" style="margin:0 auto;" name="hownew">{{hownew[index1]}}</picker>
+      </view>
+      <view class="choice_row_item">
+        <picker range="{{classify}}" value="{{classify[index2]}}" bindchange="bindPickerChange2" class="choice_row_item" style="margin:0 auto;" name="classify">{{classify[index2]}}</picker>
+      </view>
+    </view>
+    <view class="isolate"></view>
+    <view class="contact">
+      <input placeholder="请输入手机号码，方便联系" name="contact" type="number" maxlength="11"></input>
+    </view>
+    <view class="wechat">
+      <input placeholder="请输入微信，方便沟通更多细节" name="wechat" maxlength="50"></input>
+    </view>
+    <view class="price_row">
+      <image src="../../../images/issue_xianzhi/money.png"></image>
+      <input type="digit" placeholder="请输入宝贝价格" maxlength="6" name="price"></input>
+    </view>
+    <button class="submit_btn" form-type="submit" disabled="{{btnIsUsing}}"> 发布</button>
+  </form>
+
+</view>

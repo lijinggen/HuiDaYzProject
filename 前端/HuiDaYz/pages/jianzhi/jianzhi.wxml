@@ -1,0 +1,105 @@
+<view class="container">  
+  <view class="add-wrap" bindtap="issueJianzhi">
+    <image src="../../images/add.png"></image>
+  </view>
+</view>
+<view class="container">
+  <view class="content_container">
+    <view class="content_head">
+      <image src="../../images/gongzuoneirong.png"></image>
+      <text>工作内容</text>
+    </view>
+    <view class="content_content">
+      <textarea maxlength="300" disabled="">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+      测试测试测试测试测试测试测试测试</textarea>
+    </view>
+  </view>
+	<view class="contact_container">
+		<view class="contact_container_wechat">
+			<image src="../../images/issue_paotui/wechat.png"></image>
+		  <text style="margin-left:10rpx;font-size:25rpx">ljgw1256467656</text>
+		</view>
+
+		<view class="contact_container_phone">
+			<image src="../../images/issue_paotui/phone.png"></image>
+			<text style="margin-left:10rpx;font-size:25rpx">13192819231</text>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../images/didian.png"></image>
+      <text style="margin-left:10rpx;font-size:25rpx">惠城区</text>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../images/jiage.png"></image>
+			 <text style="margin-left:10rpx;font-size:25rpx">20/h</text>
+		</view>
+	</view>
+
+</view>
+
+<view class="container">
+  <view class="content_container">
+    <view class="content_head">
+      <image src="../../images/gongzuoneirong.png"></image>
+      <text>工作内容</text>
+    </view>
+    <view class="content_content">
+      <textarea maxlength="300" disabled="">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+      测试测试测试测试测试测试测试测试</textarea>
+    </view>
+  </view>
+	<view class="contact_container">
+		<view class="contact_container_wechat">
+			<image src="../../images/issue_paotui/wechat.png"></image>
+		  <text style="margin-left:10rpx;font-size:25rpx">ljgw1256467656</text>
+		</view>
+
+		<view class="contact_container_phone">
+			<image src="../../images/issue_paotui/phone.png"></image>
+			<text style="margin-left:10rpx;font-size:25rpx">13192819231</text>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../images/didian.png"></image>
+      <text style="margin-left:10rpx;font-size:25rpx">惠城区</text>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../images/jiage.png"></image>
+			 <text style="margin-left:10rpx;font-size:25rpx">20/h</text>
+		</view>
+	</view>
+
+</view>
+
+<view class="container">
+  <view class="content_container">
+    <view class="content_head">
+      <image src="../../images/gongzuoneirong.png"></image>
+      <text>工作内容</text>
+    </view>
+    <view class="content_content">
+      <textarea maxlength="300" disabled="">
+     惠州学院
+		 菜鸟驿站618快递帮忙整理
+		 待遇优厚，比较幸苦</textarea>
+    </view>
+  </view>
+	<view class="contact_container">
+		<view class="contact_container_wechat">
+			<image src="../../images/issue_paotui/wechat.png"></image>
+		  <text style="margin-left:10rpx;font-size:25rpx">ljgw1256467656</text>
+		</view>
+
+		<view class="contact_container_phone">
+			<image src="../../images/issue_paotui/phone.png"></image>
+			<text style="margin-left:10rpx;font-size:25rpx">13192819231</text>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../images/didian.png"></image>
+      <text style="margin-left:10rpx;font-size:25rpx">惠城区</text>
+		</view>
+    <view class="contact_container_phone">
+			<image src="../../images/jiage.png"></image>
+			 <text style="margin-left:10rpx;font-size:25rpx">20/h</text>
+		</view>
+	</view>
+
+</view>

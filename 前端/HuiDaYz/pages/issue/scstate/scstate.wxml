@@ -1,0 +1,13 @@
+<view class="container">
+  <textarea placeholder="分享校园或关于你的有趣的故事..." maxlength="350" bindinput="getContent"></textarea>
+  <view class="image_group">
+    <view wx:for="{{imageList}}" class="image_group_list">
+      <image src="{{item}}" mode="aspectFill" bindlongpress="deleteImage" data-index="{{index}}"></image>
+    </view>
+    <view class="select" bindtap="chooseImage" wx:if="{{imageList.length!=9}}">
+      <image src="../../../images/add3.png"></image>
+    </view>
+  </view>
+
+  <button class="issue_btn" bindtap="issue" disabled="{{issuing}}">发布</button>
+</view>

@@ -1,0 +1,294 @@
+page {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 85%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.classify {
+  display: flex;
+  flex-direction: column;
+}
+
+.classify_head {
+  position: relative;
+  z-index: 99;
+  background: #fff;
+  display: flex;
+  height: 40px;
+  font-size: 16px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: row;
+  justify-content: center;
+  color: gray;
+}
+
+.classify_btn {
+  background: rgb(241, 241, 241);
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  padding: 2px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 15px;
+  width: 46px;
+}
+
+.classify_btn image {
+  height: 20px;
+  width: 20px;
+}
+
+.classify_search {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  background: rgb(241, 241, 241);
+  align-items: center;
+  padding: 2px;
+  padding-left: 3px;
+  border-radius: 5px;
+  margin-right: 15px;
+  width: 60%;
+}
+
+.classify_search image {
+  height: 20px;
+  width: 20px;
+}
+
+.classify_search input {
+  margin-left: 6px;
+  font-size: 14px;
+  color: rgb(119, 113, 113);
+  line-height: 30px;
+}
+
+.classify_search_btn button {
+  vertical-align: middle;
+  height: 34px;
+  background: rgb(241, 241, 241);
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
+
+.temp {
+  display: none;
+  width: auto;
+  background: rgb(255, 255, 255);
+}
+
+.classify_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.classify_container_row {
+  padding-left: 15px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.classify_container_row_item {
+  border-radius: 5px;
+  line-height: 30px;
+  font-size: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.classify_container_row_item_select {
+  background: #5ac8fa;
+  border-radius: 5px;
+  line-height: 30px;
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+@keyframes slidown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.slidown {
+  display: block;
+  animation: slidown 0.6s ease both;
+}
+
+.add-wrap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  background: rgba(206, 206, 206, 0.3);
+  border-radius: 30rpx;
+  padding: 10px;
+  justify-content: center;
+}
+
+.add-wrap image {
+  width: 25px;
+  height: 25px;
+}
+
+.xianzhi_item_container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 6rpx;
+  padding: 15rpx;
+  padding-bottom: 5rpx;
+  background: rgb(248, 248, 248);
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.xianzhi_item_head {
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  width: 100%;
+  padding-bottom: 10rpx;
+  margin: 0 auto;
+}
+
+.xianzhi_item_head image {
+  margin-left: 15rpx;
+  height: 60rpx;
+  width: 60rpx;
+
+}
+
+.xianzhi_item_head text {
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  font-size: 29rpx;
+}
+
+.xianzhi_item_middle {
+  display: flex;
+  flex-direction: row;
+  height: 140rpx;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20rpx;
+  padding-top: 8rpx;
+  padding-left: 15rpx;
+}
+
+.xianzhi_item_middle image {
+  height: 140rpx;
+  width: 140rpx;
+}
+
+.xianzhi_item_middle_text {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.xianzhi_item_middle_text_text {
+  line-height: 70rpx;
+  font-size: 26rpx;
+  margin-left: 15rpx;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-weight: bold;
+}
+
+.xianzhi_item_middle_text_xxx {
+  height: 40%;
+  width: 100%;
+  margin-left: 15rpx;
+  font-size: 22rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.xianzhi_item_foot {
+  display: flex;
+  flex-direction: row;
+  height: 35rpx;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 9rpx;
+}
+
+.xianzhi_item_foot text {
+  font-size: 20rpx;
+  line-height: 35rpx;
+  margin-left: 25rpx;
+  color:gray;
+}
+
+.xianzhi_item_foot_watch {
+  height: 35rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 90rpx;
+}
+
+.xianzhi_item_foot_watch image {
+  height: 35rpx;
+  width: 35rpx;
+}
+
+.xianzhi_item_foot_watch text {
+  line-height: 36rpx;
+  font-size: 20rpx;
+  color: gray;
+}
+
+.bottom_row {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bottom_row button {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.bottom_row_page {
+  margin: 0 auto;
+  background: rgb(248, 248, 248);
+  height: 32px;
+  line-height: 32px;
+  width: 72px;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,49 @@
+<view class="container">
+	<view class="list_item_container" wx:for="{{wendaList}}">
+		<view class="list_item_container_head" bindtap="showAnswer">
+			<image src="{{item.avatarUrl}}"></image>
+			<text >{{item.nickName}}</text>
+		</view>
+		<view class="list_item_container_content">
+			<view class="list_item_container_content_question"><text>{{item.question}}</text></view>
+			<view class="list_item_container_content_detail"><text>{{item.detail}}</text></view>
+		</view>
+		<view wx:if="{{item.finalImgUrl!=null}}" class="list_item_container_Img">
+			<view wx:for="{{item.finalImgUrl}}" class="question_image_item" wx:for-item="imgItem"> 
+				<image src="{{imgItem}}" mode="aspectFill"></image>
+			</view>
+		</view>
+		<view class="list_item_container_bottom" >
+			<view  class="list_item_container_bottom_btn" hover-class="list_item_container_bottom_btn_hover" bindtap="donghua" data-index="{{index}}">查看回复</view>
+			<text>{{item.formatTime}}</text>
+		</view>
+		<view  class="answer" animation="{{anr[index]}}" style="display:{{isFold[index]? 'block':'none'}}" id="answer{{index}}"> 
+			<view class="answer_head">
+				<input name="commentContent" bindinput="getCommentContent" data-index="{{index}}"></input>
+				<button size="mini"  bindtap="issueComment" data-belongID="{{item.wendaID}}" data-index="{{index}}">回复</button>
+			</view>
+			<scroll-view class="answer_content" scroll-y wx:if="{{item.wendaCommentList.length!=0}}">
+				<view class="answer_item" wx:for="{{item.wendaCommentList}}" wx:for-item="commentItem" wx:for-index="commentIndex">
+					<view class="answer_item_head">
+						<image src="{{commentItem.avatarUrl}}"></image>
+						<text>{{commentItem.nickName}}</text>
+					</view>
+					<view class="answer_item_cotent">
+						<text>{{commentItem.commentContent}}</text>
+					</view>
+					<view class="answer_item_bottom">
+						<text>{{commentItem.formatTime}}</text>
+						<image src="../../images/dianzan.png"></image>
+						<text style="margin-right:10rpx; margin-top:5rpx;">{{commentItem.admireTimes}}</text>
+					</view>
+				</view>
+			</scroll-view>
+			<view wx:else style="display:flex; flex-direction:column">
+				<image src="../../images/empty2.png" style="width:250rpx;height:250rpx;margin:0 auto;margin-top:30rpx"></image>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="add-wrap" bindtap="issueWenda">
+	<image src="../../images/add4.png"></image>
+</view>

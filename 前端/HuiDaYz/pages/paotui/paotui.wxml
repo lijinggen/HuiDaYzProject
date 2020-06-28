@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="paotuiItem" wx:for="{{paotuiList}}">
+    <view class="paotuiItem_left">
+      <view class="paotuiItem_head">
+        <image src="{{item.avatarUrl}}"></image>
+        <text>{{item.nickName}}xxd</text>
+      </view>
+      <view class="paotuiItem_middle" wx:if="{{item.classify=='快递帮拿'}}">
+        <text>快递帮拿</text>
+        <text>取件地点：{{item.qujianPlace}}</text>
+        <text>送达时间：{{item.songdaTime}}</text>
+        <text>送达地点：{{item.songdaPlace}}</text>
+      </view>
+      <view class="paotuiItem_middle" wx:if="{{item.classify=='快递帮寄'}}">
+        <text>快递帮拿</text>
+        <text>取货地点：{{item.qujianPlace}}</text>
+        <text>取货时间：{{item.qujianTime}}</text>
+      </view>
+      <view class="paotuiItem_middle" wx:if="{{item.classify=='打印'}}">
+        <text>代打印</text>
+        <text>送达地点：{{item.songdaPlace}}</text>
+        <text>送达时间：{{item.songdaTime}}</text>
+      </view>
+      <view class="paotuiItem_foot">
+        <text>发布于{{item.formatTime}}</text>
+      </view>
+    </view>
+    <view class="paotuiItem_right" bindtap="">
+      <text class="paotuiItem_right_price">￥{{item.price}}</text>
+      <view class="paotuiItem_right_btn">
+        <image src="../../images/qiang.png"></image>
+        <text>抢单</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="add-wrap" hover-class="plus-hover" bindtap="issuePaotui">
+  <image src="../../images/issue_paotui/add.png"></image>
+</view>

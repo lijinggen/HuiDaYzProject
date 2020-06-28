@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="head">
+    <image src="{{xianzhi.avatarUrl}}"></image>
+    <view class="head_right">
+      <text style="font-size: 30rpx;">{{xianzhi.nickName}}</text>
+      <text style="color: grey; letter-spacing:3rpx;">发布于{{xianzhi.formatTime}}</text>
+    </view>
+
+  </view>
+  <view class="first">
+
+    <view class="title">
+      <text>{{xianzhi.title}}</text>
+    </view>
+    <view class="price">
+      <span style="color:red;font-size:28rpx">￥</span>
+      <text>{{xianzhi.price}}</text>
+    </view>
+
+    <view class="introduce">
+      <text>{{xianzhi.introduce}}</text>
+    </view>
+    <view class="image" wx:for="{{xianzhi.finalImgUrl}}">
+      <image src="{{item}}" mode="aspectFill" data-currenturl="{{item}}" data-urls="{{xianzhi.finalImgUrl}}" bindtap="previewImg"></image>
+    </view>
+  </view>
+
+  <view class="contact_container">
+    <view class="contact">
+      <text decode="true" style="color:balck">联系方式：</text>
+      <text decode="true" style="color:gray">购买后可见</text>
+    </view>
+    <view class="wechat">
+      <text decode="true" style="color:balck">微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：</text>
+      <text decode="true" style="color:gray">购买后可见</text>
+    </view>
+    <view class="location">
+      <text decode="true" style="color:balck">交易地址：</text>
+      <text decode="true" style="color:gray">购买后可见</text>
+    </view>
+  </view>
+
+  <view class="comment_container">
+    <text bindtap="changeResponse" data-content="请输入评论" class="comment_container_text" bindtap="changeResponse">留言区</text>
+    <view class="answer">
+      <input placeholder="{{placeholder}}" bindinput="getCommentContent" value="{{commentContent}}"></input>
+      <button bindtap="issuingComment" size="mini">回复</button>
+    </view>
+    <view wx:if="{{comment.length!=0}}" class="comment_container_head">
+      <view class="comment_container_head_item" wx:for="{{comment}}" wx:key='index' bindtap="changeResponse" data-content="{{comment.length-index}}">
+        <text>{{item.commentContent}}</text>
+        <view class="comment_container_head_item_foot">
+          <text>{{comment.length-index}}楼</text>
+          <view style="margin-left:auto;">
+            <text>{{item.formatTime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="comment_container_middle">
+      <image src="../../../images/empty2.png"></image>
+    </view>
+  </view>
+
+  <view class="add-wrap " hover-class="plus-hover ">
+    <button>立即购买</button>
+  </view>
+</view>

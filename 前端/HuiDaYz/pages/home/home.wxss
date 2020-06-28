@@ -1,0 +1,262 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40rpx;
+}
+.home-swiper {
+  width: 100%;
+  height: 300rpx;
+  margin: 0 auto;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.navi_container{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 360rpx;
+  margin: 0 auto;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 25rpx;
+  margin-top: -20rpx;
+  background-color: white;
+  z-index: 10;
+  box-shadow:-5px 5px 10px -4px #e6e6e6,5px 5px 10px -4px #ececec;
+  border-top-left-radius: 10rpx; 
+  border-top-right-radius: 10rpx; 
+}
+.navi_container_row{
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+  margin: 0 auto;
+}
+.navi_item{
+  display: flex;
+  flex-direction: column;
+  width: 96rpx;
+  height:126rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.navi_item_image{
+  height: 96rpx;
+  width:96rpx;
+}
+
+.navi_item_text{
+  font-size: 20rpx;
+  margin: 0 auto ;
+  margin-top: 10rpx;
+  color: rgb(107, 107, 107);
+}
+
+.line{
+  width: 90%;
+  height: 2rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  margin-bottom: 35rpx;
+  background-color: rgb(117, 149, 255);
+} 
+.notic_container{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 650rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+  box-shadow:-5px 5px 10px -4px #e6e6e6,5px 5px 10px -4px #ececec;
+}
+
+.notic_container_head{
+  height: 86rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+
+.notic_container_head_img{
+  margin-top: 8rpx;
+  height: 70rpx;
+  width: 70rpx;
+}
+.notic_container_head_text{
+  margin-left: 10rpx;
+  font-weight: 900;
+  margin-top:8rpx;
+  line-height: 86rpx;
+}
+.bottom{
+  height: 1rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  width: 80%;
+  border-bottom: 3px solid rgb(196, 192, 192);
+}
+
+.gonggao_item_container{
+
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.gonggao_item{
+  background: rgba(206, 206, 206, 0.3);
+  height: 100rpx;
+  border-radius: 12rpx;
+  margin: 0 auto;
+  margin-top: 12rpx;
+}
+
+.gonggao_item_head{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+
+.gonggao_item_head image{
+  width: 70rpx;
+  height: 70rpx;
+  align-self: center;
+  
+}
+
+.gonggao_item_head text{
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  margin-top: 7rpx;
+  font-weight: bold;
+}
+
+.gonggao_item_head button{
+  height: 60rpx;
+  align-self: center;
+  margin-right: 20rpx;
+  line-height: 60rpx;
+}
+
+
+.wrap{
+  width: 95%;
+  margin: 0 auto;
+  background: rgba(206, 206, 206, 0.3);
+  border-radius: 12rpx;
+  padding: 12rpx;
+}
+.date-show{
+  position: relative;
+  width: 250rpx;
+  font-family: PingFang-SC-Regular;
+  font-size: 22rpx;
+  color: #282828;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.lt-arrow,.rt-arrow{
+  position: absolute;
+  top: 1rpx;
+  width: 60rpx;
+  height: 60rpx;
+  padding-right: 0.6rem;
+}
+.lt-arrow image,.rt-arrow image{
+  width: 25rpx;
+  height: 25rpx;
+}
+.lt-arrow{
+  left: -110rpx;
+  /* transform: rotate(180deg); */
+}
+.rt-arrow{
+  right: -100rpx;
+}
+.header{
+  font-size: 0;
+  padding: 0 24rpx;
+}
+.header>view{
+  display: inline-block;
+  width: 14.285%;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+  border-bottom: 1px solid #D0D0D0;
+  padding: 10rpx 0;
+}
+.weekMark{
+  position: relative;
+}
+.weekMark view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #22A7F6;
+}
+.date-box{
+  font-size: 0;
+  padding: 0rpx 0;
+}
+.date-box>view{
+  position: relative;
+  display: inline-block;
+  width: 14.285%;
+  color: #020202;
+  font-size: 40rpx;
+  text-align: center;
+  vertical-align: middle;
+  margin: 15rpx 0;
+}
+.date-head{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 18rpx;
+}
+.nowDay .date-head{
+  width: 30rpx;
+  border-radius: 12rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #22A7F6;
+  margin: 0 auto;
+}
+.date-weight{
+  font-size: 22rpx;
+  padding: 5rpx 0;
+}
+.nowDay .date-weight{
+  color: #22A7F6;
+}
+.one{
+  position: absolute;
+  bottom: 0;
+  right: 5rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: red;
+}
+.two{
+  position: absolute;
+  bottom: 30rpx;
+  right: 5rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: blue;
+}

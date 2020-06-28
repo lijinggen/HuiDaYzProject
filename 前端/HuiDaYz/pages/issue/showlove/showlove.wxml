@@ -1,0 +1,23 @@
+<view class="container">
+  <form bindsubmit="issueShowlove">
+    <view class="first">
+      <input placeholder="请输入你要表白的对象" name="target" maxlength="50"></input>
+    </view>
+    <view class="second">
+      <textarea placeholder="描述你爱慕Ta的理由" name="reason" maxlength="100"></textarea>
+    </view>
+    <view class="third">
+      <switch checked="true" color="#FF7792" name="isNiming">是否匿名</switch>
+    </view>
+    <view class="four">
+      <view wx:if="{{imageTempUrl.length==0}}" class="four_first" bindtap="chooseImg">
+        <image src="../../../images/add2.png"></image>
+        <text>选择照片(可选)</text>
+      </view>
+      <view wx:else class="four_second"> 
+        <image src="{{imageTempUrl[0]}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <button form-type="submit">提交</button>
+  </form>
+</view>

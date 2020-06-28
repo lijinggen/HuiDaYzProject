@@ -1,0 +1,122 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.contact_container {
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  width: 90%;
+  border-radius: 12rpx;
+  background: rgba(221, 221, 221, 0.397);
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 20rpx;
+}
+
+.contact_container_wechat {
+  display: flex;
+  flex-direction: row;
+  padding: 5rpx;
+  align-items: center;
+}
+
+.contact_container_wechat image {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 10rpx;
+}
+
+.contact_container_wechat input {
+  border-left: 1rpx solid rgb(255, 255, 255);
+  line-height: 60rpx;
+  height: 60rpx;
+  padding-left: 10rpx;
+}
+
+.contact_container_price {
+  display: flex;
+  flex-direction: row;
+  padding: 5rpx;
+  align-items: center;
+}
+
+.contact_container_price image {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 10rpx;
+}
+
+.contact_container_price input {
+  border-left: 1rpx solid rgb(255, 255, 255);
+  line-height: 60rpx;
+  height: 60rpx;
+  padding-left: 10rpx;
+}
+
+.contact_container_phone {
+  display: flex;
+  flex-direction: row;
+  padding: 5rpx;
+  align-items: center;
+}
+
+.contact_container_phone image {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 10rpx;
+}
+
+.contact_container_phone input {
+  border-left: 1rpx solid rgb(255, 255, 255);
+  line-height: 60rpx;
+  height: 60rpx;
+  padding-left: 10rpx;
+}
+
+.container button {
+  position: fixed;
+  bottom: 50rpx;
+  background: rgba(221, 221, 221, 0.397);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.content_container{
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx;
+  background: rgba(221, 221, 221, 0.397);
+  border-radius: 12rpx;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content_head{
+  height: 70rpx;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.content_head text{
+  line-height: 70rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.content_head image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.content_content{
+  background: white;
+  margin-top: 10rpx;
+}
+.content_content textarea{
+  font-size: 24rpx;
+  padding:10rpx
+}

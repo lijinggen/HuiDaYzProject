@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/issue/jianzhi/jianzhi",
+    "pages/issue/wenda/wenda",
+    "pages/wenda/wenda",
+    "pages/xianzhi/xianzhi",
+    "pages/paotui/paotui",
+    "pages/issue/paotui/paotui",
+    "pages/scstate/scstate",
+    "pages/issue/scstate/scstate",
+    "pages/showlove/showlove",
+    "pages/issue/showlove/showlove",
+    "pages/detail/xianzhi/xianzhi",
+    "pages/issue/xianzhi/xianzhi",
+    "pages/index/index",
+    "pages/tempXianzhi/tempXianzhi",
+    "pages/detail/showlove/showlove",
+    "pages/renzheng/renzheng",
+    "pages/jianzhi/jianzhi"
+ 
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请确认授权"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/tabar/home.png",
+        "iconPath": "images/tabar/home.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tabar/xianzhi.png",
+        "iconPath": "images/tabar/xianzhi.png",
+        "pagePath": "pages/xianzhi/xianzhi",
+        "text": "闲置"
+      },
+      {
+        "selectedIconPath": "images/tabar/run.png",
+        "iconPath": "images/tabar/run.png",
+        "pagePath": "pages/paotui/paotui",
+        "text": "跑腿"
+      },
+      {
+        "selectedIconPath": "images/tabar/my.png",
+        "iconPath": "images/tabar/my.png",
+        "pagePath": "pages/index/index",
+        "text": "我"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="first">
+      <text>第2期</text>
+  </view>
+  <view class="second" wx:for="{{showloveList}}" data-showloveID="{{item.showloveID}}">
+    <view class="head" bindtap="detailShowlove" data-showloveID="{{item.showloveID}}">
+      <image src="{{item.avatarUrl}}"></image>
+      <text>{{item.nickName}}</text>
+    </view>
+    <view class="middle" bindtap="detailShowlove" data-showloveID="{{item.showloveID}}">
+      <text>To:{{item.target}}</text>
+    </view>
+    <view class="foot">
+      <text disabled="true">{{item.reason}}</text>
+      <image wx:if="{{item.finalImgUrl!='weixuan'}}" src="{{item.finalImgUrl}}" mode="aspectFit" bindtap="previewImg" data-imgUrl="{{item.finalImgUrl}}"></image>
+    </view> 
+  </view>
+  <view class="add-wrap" hover-class="plus-hover" bindtap="issueShowlove">
+    <image src="../../images/add2.png"></image>
+  </view>
+</view>
